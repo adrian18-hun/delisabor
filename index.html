@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeliSabor · Tequeños & Pan de Guayaba</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- MASCOTA INTERACTIVA -->
+  <div class="mascota-container" id="mascotaContainer">
+    <img src="images/mascota.png" alt="Mascota DeliSabor" class="mascota" id="mascota">
+    <div class="mascota-message" id="mascotaMessage"></div>
+  </div>
+
+  <!-- Barra superior -->
+  <div class="top-bar">
+    <i class="fas fa-truck"></i> Envíos a todo el Perú · <i class="fas fa-credit-card"></i> Pago seguro · <i class="fas fa-leaf"></i> Ingredientes frescos
+  </div>
+
+  <!-- Encabezado principal -->
+  <header>
+    <div class="logo">
+  <img src="images/logo.png" alt="DeliSabor Logo" class="logo-img">
+  <span>DeliSabor</span>
+</div>
+    <nav class="nav-icons">
+      <a href="#" id="home-icon" aria-label="Inicio"><i class="fas fa-home"></i></a>
+      <a href="#" id="search-icon" aria-label="Buscar"><i class="fas fa-search"></i></a>
+      <a href="#" id="favorites-icon" aria-label="Favoritos"><i class="fas fa-heart"></i></a>
+      <a href="#" id="cart-icon" aria-label="Carrito de compras">
+        <i class="fas fa-shopping-bag"></i>
+        <span id="cart-count">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Auténtico sabor <br> en cada bocado</h1>
+      <p>Tequeños crujientes y pan de guayaba recién horneado. Hecho con amor y tradición peruana.</p>
+      <button class="btn" onclick="document.querySelector('.product-grid').scrollIntoView({behavior:'smooth'})">
+        <i class="fas fa-cookie-bite"></i> Explorar productos
+      </button>
+    </div>
+    <div class="hero-image">
+      <img src="images/tequenos.jpg" alt="Tequeños venezolanos artesanales">
+      <img src="images/pan-guayaba.jpg" alt="Pan de guayaba tradicional">
+    </div>
+  </section>
+
+  <!-- Título de productos -->
+  <h2 class="section-title"><i class="fas fa-star"></i> Nuestros productos</h2>
+
+  <!-- GRID DE PRODUCTOS -->
+  <div class="product-grid" id="productGrid">
+    
+    <!-- Tequeños clásicos -->
+    <div class="product-card">
+      <img src="images/tequenos.jpg" alt="Tequeños clásicos">
+      <div class="product-info">
+        <h3>Tequeños clásicos</h3>
+        <p>12 unidades de masa dorada y queso fundido.</p>
+        <div class="price-cart">
+          <span class="price">S/ 32.50</span>
+          <button class="add-to-cart" data-id="1" data-name="Tequeños clásicos" data-price="32.50" data-img="tequenos.jpg">
+            <i class="fas fa-cart-plus"></i> Añadir
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pan de guayaba tradicional -->
+    <div class="product-card">
+      <img src="images/pan-guayaba.jpg" alt="Pan de guayaba casero">
+      <div class="product-info">
+        <h3>Pan de guayaba</h3>
+        <p>Pan suave relleno de dulce de guayaba.</p>
+        <div class="price-cart">
+          <span class="price">S/ 24.90</span>
+          <button class="add-to-cart" data-id="2" data-name="Pan de guayaba" data-price="24.90" data-img="pan-guayaba.jpg">
+            <i class="fas fa-cart-plus"></i> Añadir
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tequeños grandes (por unidad) -->
+    <div class="product-card">
+      <img src="images/tequenos.jpg" alt="Tequeños grandes">
+      <div class="product-info">
+        <h3>Tequeños grandes</h3>
+        <p>Unidad de masa crujiente y queso derretido.</p>
+        <div class="price-cart">
+          <span class="price">S/ 3.00</span>
+          <button class="add-to-cart" data-id="3" data-name="Tequeños grandes" data-price="3.00" data-img="tequenos.jpg">
+            <i class="fas fa-cart-plus"></i> Añadir
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pan de guayaba por unidad -->
+    <div class="product-card">
+      <img src="images/pan-guayaba.jpg" alt="Pan de guayaba por unidad">
+      <div class="product-info">
+        <h3>Pan de guayaba</h3>
+        <p>Unidad de pan suave con guayaba.</p>
+        <div class="price-cart">
+          <span class="price">S/ 3.70</span>
+          <button class="add-to-cart" data-id="4" data-name="Pan de guayaba (unidad)" data-price="3.70" data-img="pan-guayaba.jpg">
+            <i class="fas fa-cart-plus"></i> Añadir
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tequeños pequeños (por unidad) -->
+    <div class="product-card">
+      <img src="images/tequenos.jpg" alt="Tequeños pequeños">
+      <div class="product-info">
+        <h3>Tequeños pequeños</h3>
+        <p>Unidad pequeña de tequeño crujiente.</p>
+        <div class="price-cart">
+          <span class="price">S/ 2.00</span>
+          <button class="add-to-cart" data-id="5" data-name="Tequeños pequeños" data-price="2.00" data-img="tequenos.jpg">
+            <i class="fas fa-cart-plus"></i> Añadir
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- El duo -->
+    <div class="product-card">
+      <img src="images/tequenos.jpg" alt="El duo">
+      <div class="product-info">
+        <h3>El duo</h3>
+        <p>Combinación de tequeño y pan de guayaba.</p>
+        <div class="price-cart">
+          <span class="price">S/ 5.00</span>
+          <button class="add-to-cart" data-id="6" data-name="El duo" data-price="5.00" data-img="tequenos.jpg">
+            <i class="fas fa-cart-plus"></i> Añadir
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANEL DE CARRITO -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h2><i class="fas fa-shopping-bag"></i> Tu pedido</h2>
+      <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p style="text-align:center; color:#8f6e53; margin-top:40px;">Tu carrito está vacío.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="total-price" id="totalPrice">Total: S/ 0.00</div>
+      <button class="checkout-btn" id="checkoutBtn"><i class="fas fa-lock"></i> Finalizar compra</button>
+    </div>
+  </aside>
+
+  <!-- MODAL DE BÚSQUEDA -->
+  <div class="search-modal" id="searchModal">
+    <div class="search-modal-content">
+      <button class="close-modal" id="closeSearch"><i class="fas fa-times"></i></button>
+      <h2>Buscar productos</h2>
+      <input type="text" id="searchInput" class="search-input" placeholder="Busca tequeños, pan de guayaba...">
+      <div id="searchResults" class="search-results"></div>
+    </div>
+  </div>
+
+  <!-- MODAL DE FAVORITOS -->
+  <div class="favorites-modal" id="favoritesModal">
+    <div class="favorites-modal-content">
+      <button class="close-modal" id="closeFavorites"><i class="fas fa-times"></i></button>
+      <h2><i class="fas fa-heart"></i> Mis favoritos</h2>
+      <div id="favoritesList" class="favorites-list"></div>
+    </div>
+  </div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p><i class="fas fa-store"></i> DeliSabor · Hecho con cariño en Perú</p>
+    <p>📍 Av. Larco 123, Selva Alegre , Arequipa · 📞 +51 987 654 321</p>
+    <p style="font-size: 0.85rem; opacity:0.8;">© 2025 DeliSabor. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
